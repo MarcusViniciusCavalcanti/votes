@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block th:fragment="header">
+  <header th:id="header">
+    <div th:id="particles"></div>
+
+    <section th:class="social-media-links">
+      <a href="#">
+        <img th:class="social-media"
+             th:src="@{images/instagram logo.png}"
+             th:alt="instagram-logo">
+      </a>
+
+      <a href="#">
+        <img th:class="social-media"
+             th:src="@{images/facebook logo.png}"
+             th:alt="facebook-logo">
+      </a>
+
+
+    </section>
+
+    <section th:class="header-content">
+      <div th:class="header-content-box">
+        <div th:class="firstline">
+          <span th:class="color">Osvaldo </span>Boeira
+        </div>
+
+        <div th:class="secondline">
+          I'm
+          <span class="txt-rotate color"
+                data-period="1200"
+                data-rotate='[ " Intense.", " Loving.", " Vibrant." ]'></span>
+          <span class="slash">|</span>
+        </div>
+      </div>
+    </section>
+
+<!--    <div th:class="header-image">-->
+<!--      <img th:src="@{images/man.jpg}" th:alt="logo">-->
+<!--    </div>-->
+  </header>
+</th:block>
+</body>
+</html>

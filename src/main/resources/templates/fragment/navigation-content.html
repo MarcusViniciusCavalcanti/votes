@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<body>
+  <th:block th:fragment="navigation-content">
+    <section th:id="navigation-content">
+      <div th:class="logo">
+        <img th:src="@{images/9aba897bae514f8cb18b3eacf38e0ab4.png}" th:alt="logo">
+      </div>
+
+      <div th:class="navigation-close">
+        <span th:class="close-first"></span>
+        <span th:class="close-second"></span>
+      </div>
+
+      <div th:class="navigation-links">
+        <a href="#" data-text="HOME" th:id="home-link">HOME</a>
+        <a href="#" data-text="LUGARES" th:id="place-link">LUGARES</a>
+        <a href="#" data-text="VOTAÇÃO" th:id="vote-link">VOTAÇÃO</a>
+      </div>
+    </section>
+  </th:block>
+</body>
+</html>

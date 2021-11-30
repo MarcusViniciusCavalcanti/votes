@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block th:fragment="place">
+  <section th:id="place">
+    <header th:class="place-header">
+      <span th:class="color"> My </span> Dream
+      <span th:class="place-caption"> Conheça as
+        <span th:class="color"> opções</span>
+      </span>
+    </header>
+
+    <section th:id="place-content">
+      <article th:class="place">
+        <div th:class="place-image">
+          <img th:src="@{images/place-first.jpg}" th:alt="portfolio-first">
+        </div>
+        <div th:class="place-text">
+          <h2>Trancoso - BA</h2>
+          <p>Visitar Trancoso, ao sul da Bahia, é uma delícia de viagem, pois se trata de um destino
+            paradisíaco que foi descoberto ainda na época da colonização portuguesa. Ocupado primeiro
+            por jesuítas, foram os ‘hippies’ que acabaram redescobrindo o paraíso na década de 70 e
+            tornaram Trancoso um dos pontos turísticos mais famosos do nordeste brasileiro.
+            A pequena vila traz ainda a tranquilidade, paz e rusticidade de antigamente,
+            mas agora um pouco mais badalada e com ótima infraestrutura. Obviamente que um dos grandes
+            motivos para visitar Trancoso são as praias… As praias da vila se encontram tanto pertinho,
+            na própria cidadezinha, quando também mais ao longe. São muitas opções!
+            De tapiocas até restaurantes renomeados de frutos do mar, a região do Quadrado é a melhor
+            opção para você se perder entre as delícias de Trancoso. A vida noturna também
+            não ira dececionar e, se for visitar Trancoso, aproveite! A pequena vila tranquila
+            oferece uma noite agitada com diversas festas no Quadrado e também nos beach ‘clubs’ das praias.
+
+          </p>
+
+          <div th:class="button">
+            <a href="https://www.youtube.com/watch?v=4XTlMZtkqro" target="_blank">
+              <button><span th:class="index"> Ver video<i class="gg-arrow-right"></i></span></button>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <div th:class="place">
+        <div th:class="place-image">
+          <img th:src="@{images/place-second.jpg}" th:alt="portfolio-second">
+        </div>
+        <div class="place-text">
+          <h2>Gramado e Canela - RS</h2>
+          <p>Não é novidade para ninguém que Gramado e Canela são referência em hospitalidade, além
+            de serem duas das cidades mais lindas da Serra Gaúcha. Os destinos turísticos mais
+            procurados do Brasil são famosos por serem parte da principal região vinífera do país,
+            por sua gastronomia diferenciada e pela arquitetura inspirada em construções clássicas
+            europeias. Mas o que muita gente não sabe é que ambos os destinos possuem curiosidades
+            surpreendentes sobre sua história, cultura e pontos turísticos!
+            Gramado e Canela hoje são os maiores destinos turísticos do estado do Rio Grande do Sul,
+            tem vário parques temáticos, incluindo a Aldeia do Papai Noel, o Snowland e o Mini Mundo.
+            Devido as influências de seus colonos, hoje Gramado e Canela tem vários restaurantes e
+            estabelecimentos onde as culturas alemã e italiana prevalecem.
+          </p>
+          <div class="button"><a href="https://youtu.be/wigFORuTdCw" target="_blank">
+            <button><span class="index"> Ver video<i class="gg-arrow-right"></i></span></button>
+          </a></div>
+        </div>
+      </div>
+
+      <div th:class="place">
+        <div th:class="place-image">
+          <img th:src="@{images/place-third.jpg}" th:alt="portfolio-third">
+        </div>
+        <div th:class="place-text">
+          <h2>Bonito - MT</h2>
+          <p>Localizada a oeste de Mato Grosso do Sul, a 265 km de Campo Grande e a 1.399 km de Brasília
+            , no Centro-Oeste do país, Bonito é uma cidade conhecida por sua beleza natural,
+            e entre os locais mais visitados estão o Parque Ecológico Baía Bonita e a Gruta do Lago Azul.
+            Flutuar nos rios de águas cristalinas e muitos peixes coloridos em Bonito, Jardim ou
+            Bodoquena é uma das melhores experiências do Brasil. E nem é preciso saber nadar, já que a
+            roupa de neoprene, colete salvas vidas e sapatilha nos mantém sobre a água, literalmente flutuando.
+            A cidade disponibiliza rede de hospedagem com mais de 6.000 leitos classificados em
+            resort, luxo superior, standard e econômico, e 38 restaurantes com cardápios variados,
+            que oferecem a opção de pratos típicos regionais com destaque para a carne de jacaré e
+            variedade de peixes de água doce, além da tradicionalíssima sopa paraguaia e do arroz carreteiro.
+            Ainda possui uma diversidade de frutas típicas como a guavira e a castanha de cumbaru.
+            Em seu artesanato, destaca-se com matéria-prima proveniente de bambu, fibras, cipó, madeira,
+            cerâmica, casca de árvores nativas do cerrado, sementes, etc. Uma excelente forma de recordar
+            momentos maravilhosos vividos neste pequeno paraíso ecológico que está de portas abertas
+            esperando sua visita.
+          </p>
+          <div class="button"><a href="https://youtu.be/UVtZH2IDJJ8" target="_blank">
+            <button>
+              <span class="index"> Ver video<i class="gg-arrow-right"></i></span>
+            </button>
+          </a></div>
+        </div>
+      </div>
+    </section>
+
+    <th:block th:include="fragment/footer :: footer" />
+  </section>
+</th:block>
+</body>
+</html>

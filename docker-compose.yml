@@ -1,0 +1,24 @@
+version: '3.6'
+services:
+  postgres:
+    container_name: osvaldo
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: xenon
+      POSTGRES_USER: xenon
+      POSTGRES_DB: osvaldo
+  app:
+    container_name: app
+    image: cavalcanti16/osvaldo-app:0.0.2
+    user: application
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - 80:8080
+    expose:
+      - 80
+    volumes:
+      - ./config/app/:/backend/config

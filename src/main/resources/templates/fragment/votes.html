@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block th:fragment="vote">
+  <section th:id="vote">
+    <div th:if="${hasVote eq  true}">
+      <div th:class="vote-header"> Votação</span>
+        <span th:class="place-caption"> Escolha para <span
+            th:class="color"> onde devo viajar.</span></span></div>
+      <div th:class="vote-content">
+        <div th:class="votes">
+          <div th:class="img">
+            <img th:src="@{images/trancoso.jpg}" th:alt="blog-three">
+          </div>
+          <div th:class="vote-text">
+            <div th:class="button">
+              <form method="post" th:action="@{/votar/trancoso}">
+                <button type="submit" th:class="button-vote"><span th:class="index"> Votar em Trancoso<i th:class="gg-arrow-right"></i></span></button>
+              </form>
+            </div>
+
+            <p>Deseja levar o Osvaldo para as praias Paradisíacas de Trancoso é dar-lhe a oportunidade
+              de curtir as noitadas da região.
+            </p>
+          </div>
+        </div>
+        <div th:class="votes">
+          <div th:class="img">
+            <img th:src="@{images/gramado.jpg}" th:alt="blog-four">
+          </div>
+          <div th:class="vote-text">
+            <div th:class="button">
+              <form method="post" th:action="@{/votar/gramado}">
+                <button th:type="submit" th:class="button-vote"><span th:class="index"> Votar em Gramado<i th:class="gg-arrow-right"></i></span></button>
+              </form>
+            </div>
+
+            <p>Caso queria dar um descanso e o aconchego do friozinho de Gramado. Lá ele poderá
+              conhecer bons lugares.
+            </p>
+          </div>
+        </div>
+
+        <div th:class="votes">
+          <div th:class="img">
+            <img th:src="@{images/bonito.jpg}" th:alt="blog-five">
+          </div>
+
+          <div th:class="vote-text">
+            <div th:class="button">
+              <form method="post" th:action="@{/votar/bonito}">
+                <button th:type="submit" th:class="button-vote"><span th:class="index"> Votar em Bonito<i th:class="gg-arrow-right"></i></span></button>
+              </form>
+            </div>
+
+            <p>Outra opção boa é Bonito, o Osvaldo terá uma oportunidade para desfrutar do puro
+              da floresta além, de curtir esportes radicais.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div th:if="${hasVote eq  false}">
+      <section th:class="header-content">
+        <div th:class="header-content-box">
+          <div th:class="firstline">
+            <span th:class="color">Votação </span>encerrada, aguarde o resultado
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</th:block>
+</body>
+</html>

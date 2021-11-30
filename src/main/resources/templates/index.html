@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site para votação"/>
+  <meta name="author" content="Vinicius Cavalanti"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Osvaldo fest</title>
+
+  <link rel="stylesheet" th:href="@{/css/index.css}">
+  <link rel="stylesheet" th:href="@{/css/breaker-style-four.css}">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+</head>
+<body>
+  <main id="all">
+    <div class="cursor"></div>
+
+    <div id="loader">
+      <span class="color">Osvaldo</span>Boeira
+    </div>
+
+    <div id="breaker"></div>
+
+    <div id="breaker-two"></div>
+
+    <th:block th:include="fragment/navigation-content :: navigation-content" />
+
+    <th:block th:include="fragment/navigation-bar :: navigation-bar" />
+
+    <th:block th:include="fragment/header :: header" />
+
+    <th:block th:include="fragment/place :: place" />
+
+    <th:block th:include="fragment/votes :: vote" />
+  </main>
+
+  <script th:src="@{/js/jquery.min.js}"></script>
+  <script th:src="@{/js/particles.js}"></script>
+  <script th:src="@{/js/particles.min.js}"></script>
+  <script th:src="@{/js/index.js}"></script>
+  <script th:src="@{/js/particles-index-config.js}"></script>
+</body>
+</html>
